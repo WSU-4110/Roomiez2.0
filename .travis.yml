@@ -1,6 +1,2 @@
 language: java
-script: mvn clean package
-jdk:
-  - openjdk11gi
-before_install:
-  - cd java
+
