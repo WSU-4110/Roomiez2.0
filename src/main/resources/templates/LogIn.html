@@ -1,0 +1,75 @@
+
+<!DOCTYPE html>
+<html xmlns:th="http://www.w3.org/1999/xhtml">
+<head>
+    <meta name="viewport" content="width=device-width">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Roomiez :: Log In</title>
+    <link rel="stylesheet" href="/static/static/stylesheet/style.css">
+
+</head>
+
+<div class="header" style="max-width:100%;overflow:auto;height:auto">
+
+
+    <a href="/home"><img class="roomiez" src="/static/static/images/Roomiez.png"/></a>
+  
+
+    <div class="links" style="max-width:100%;overflow:auto;height:auto">
+        <a href="https://www.facebook.com"><img class="facebook" src="/static/static/images/facebook.png"/></a>
+
+        <a href="https://www.twitter.com"><img class="twitter" src="/static/static/images/twitter.png"/></a>
+
+        <a href="https://www.instagram.com"><img class="insta" src="/static/static/images/insta.jpeg"/></a>
+
+
+
+    </div>
+</div>
+<body>
+
+<hr>
+
+
+<div class="registrationcontainer">
+
+    <h1>LOG IN TO FIND YOUR POTENTIAL ROOMIEZ</h1>
+    <br>
+    <br>
+    <div class="loginbox">
+
+        <div th:if="${param.error}">
+            <h2> Invalid username and password. Please try again.</h2>
+        </div>
+        <div th:if="${param.logout}">
+            <h2>You have been logged out. See you soon!</h2>
+        </div>
+        <br>
+
+        <form th:action="@{/login}"  method="post">
+        <label>Username:</label><br>
+            <div class="logintext">
+                <input type="text" name="username"  placeholder="Enter Username" required><br>
+            </div>
+        <br>
+        <br>
+        <label>Password:</label><br>
+            <div class="logintext">
+                <input type="password"  name="password" placeholder="Enter a Password" required>
+            </div>
+        <br>
+        <br>
+        <br>
+        <br>
+
+        <div class="alignbutton">
+            <input type="submit" class="regbutton" id="signupbutton" value="Log In" align="center">
+        </div>
+    </form>
+</div>
+
+
+
+</div>
+</body>
+</html>

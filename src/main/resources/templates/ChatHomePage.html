@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.w3.org/1999/xhtml">
+<head>
+    <meta name="viewport" content="width=device-width">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Roomiez :: Chat Home Page</title>
+    <link rel="stylesheet" href="/static/static/stylesheet/style.css">
+
+</head>
+
+<div class="header" style="max-width:100%;overflow:auto;height:auto">
+
+    <a href="/home"><img class="roomiez" src="/static/static/images/Roomiez.png"/></a>
+
+    <div class="links" style="max-width:100%;overflow:auto;height:auto">
+        <a href="https://www.facebook.com"><img class="facebook" src="/static/static/images/facebook.png"/></a>
+        <a href="https://www.twitter.com"><img class="twitter" src="/static/static/images/twitter.png"/></a>
+        <a href="https://www.instagram.com"><img class="insta" src="/static/static/images/insta.jpeg"/></a>
+
+    </div>
+</div>
+
+
+<body>
+<hr>
+<ul>
+    <li><a href="/UserHomePage">[[${#httpServletRequest.remoteUser}]]'s Home Page</a></li>
+    <li><a href="/aboutmeForm">Edit Profile</a></li>
+    <li><a href="/PotentialMatches">Search for Matches</a></li>
+    <li><a href="/HelpBar">Help Bar</a></li>
+    <li style="float:right"><form th:action="@{/logout}" method="post"><input type="submit" value="Log Out"/></li>
+</ul>
+
+
+<div class="registrationcontainer">
+
+<img class="chatlogo" src="/static/static/images/RoomiezChat.png"/>
+    <h1>Chat with Potential Roomiez</h1>
+
+
+</div>
+</body>
+</html>
