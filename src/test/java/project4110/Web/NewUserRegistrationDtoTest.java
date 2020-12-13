@@ -9,6 +9,7 @@ public class NewUserRegistrationDtoTest {
 
     NewUserRegistrationDto registrationDto = new NewUserRegistrationDto("Kelly", "Maisel", "email", "password");
     NewUserRegistrationDto registrationDto1 = new NewUserRegistrationDto("John", "Smith", "email", "1234");
+
     @Test
     //This test is to see if the first name will store properly
     public void firstNameDtoTest(){
